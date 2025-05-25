@@ -1,0 +1,390 @@
+/* Reset básico para eliminar márgenes y paddings predeterminados */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Estructura principal de grid para toda la página */
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh; /* Asegura que el contenido ocupe al menos toda la altura de la ventana */
+  background-color: #f5f5f5;
+  color: #000000;
+  line-height: 1.6;
+}
+
+/* Header con grid */
+header {
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* Icono+título / espacio / botones */
+  align-items: center;
+  background-color: #ffffff;
+  color: #457b9d;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #457b9d;
+}
+
+/* Contenedor para logo y título */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.titulo h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1d3557;
+}
+
+/* Navegación con botones */
+nav {
+  grid-column: 3;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+nav a {
+  color: #457b9d;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #1d3557;
+  color: #ffffff;
+}
+
+/* Contenido principal */
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 10px auto;
+  width: 100%;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-form {
+  max-width: 1200px;
+  margin: 10px auto;
+  width: 50%;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sección de artículos con grid */
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.article {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el buscador */
+.buscador {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en móviles */
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 0 auto 2rem;
+  max-width: 800px; /* Limita el ancho máximo en pantallas grandes */
+}
+
+.buscador input[type="text"],
+.buscador select {
+  padding: 0.8rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  flex-grow: 1; /* Permite que crezcan para ocupar espacio disponible */
+  min-width: 150px; /* Ancho mínimo para mantener usabilidad */
+}
+
+.buscador input[type="text"] {
+  width: 300px; /* Ancho por defecto */
+}
+
+.buscador input[type="text"]:focus {
+  border-color: #457b9d;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(69, 123, 157, 0.2);
+}
+
+.buscador button {
+  padding: 0.8rem 1.5rem;
+  background-color: #457b9d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+  flex-shrink: 0; /* Evita que los botones se reduzcan demasiado */
+}
+
+.buscador button:hover {
+  background-color: #315d7d;
+}
+
+.search{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem; /* Espacio entre el buscador y los botones */
+  width: 100%; /* Asegura que ocupe todo el ancho */
+  height: max-content;
+  max-height: 100px; /* Limita el ancho máximo */
+}
+
+/* Media queries para móviles */
+@media (max-width: 768px) {
+  .buscador {
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: stretch; /* Hace que los elementos ocupen todo el ancho */
+    gap: 0.8rem;
+    padding: 1rem;
+  }
+
+  .buscador input[type="text"],
+  .buscador select,
+  .buscador button {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    box-sizing: border-box; /* Incluye padding en el ancho */
+  }
+
+  .buscador-botones {
+    display: flex;
+    gap: 0.8rem;
+  }
+
+  .buscador-botones button {
+    flex: 1; /* Distribuye el espacio equitativamente */
+  }
+}
+
+/* Estilos para el listado */
+.items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem; /* Espacio para la paginación */
+}
+
+.card {
+  margin: 0px;
+  padding: 0;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e9ecef;
+  transition: transform 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  padding: 1rem;
+  background-color: #f1eadf;
+  text-align: center;
+}
+
+.card-header img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.card-body {
+  padding: 1rem;
+  flex-grow: 1;
+}
+
+.card-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card-body li {
+  background-color: #fff;
+}
+
+/* Estilos para la paginación */
+
+.nav-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; /* Espacio entre los elementos */
+  margin-top: 2rem; /* Espacio superior */
+}
+.pagination {
+  flex-wrap: nowrap; /* Evita que se rompa en múltiples líneas */
+  overflow-x: auto; /* Permite scroll horizontal en móviles */
+  padding: 1rem 0 2rem; /* Más espacio abajo */
+  justify-content: center;
+}
+
+.pagination-wrapper {
+  order: 2; /* Fuerza a que la paginación vaya al final */
+  margin-top: auto; /* Empuja hacia abajo */
+  padding-top: 2rem;
+}
+
+.page-item {
+  display: inline-block;
+  padding: 5px;
+}
+
+/* Mantén tu grid de tarjetas */
+.items > .card {
+  width: 100%;
+}
+
+.page-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.5rem;
+  height: 2.5rem;
+  padding: 0 0.75rem;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #457b9d;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.page-link:hover {
+  background-color: #f8f9fa;
+  border-color: #dee2e6;
+  color: #315d7d;
+}
+
+.page-item.active .page-link {
+  background-color: #457b9d;
+  border-color: #457b9d;
+  color: white;
+}
+
+.page-item.disabled .page-link {
+  color: #6c757d;
+  pointer-events: none;
+  background-color: #fff;
+  border-color: #dee2e6;
+  opacity: 0.7;
+}
+
+/* Responsive para móviles */
+@media (max-width: 576px) {
+  .pagination {
+    gap: 0.3rem;
+  }
+
+  .page-link {
+    min-width: 2rem;
+    height: 2rem;
+    padding: 0 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+/* Botones */
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Footer */
+footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: auto; /* Empuja el footer hacia abajo */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 1rem;
+  }
+
+  .header-left {
+    justify-content: center;
+  }
+
+  nav {
+    grid-column: 1;
+    justify-content: center;
+  }
+
+  .article-grid {
+    grid-template-columns: 1fr;
+  }
+}

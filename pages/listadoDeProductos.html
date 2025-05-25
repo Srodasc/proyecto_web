@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/forms.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Registro</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-left">
+        <div class="logo">
+          <img src="/img/logo.png" alt="Logo de la empresa" />
+        </div>
+        <h1>Stone Buldings SAS</h1>
+      </div>
+      <nav>
+        <a href="../index.html">Indicaciones</a>
+        <a href="/pages/registroProductos.html">Registro</a>
+        <a href="/pages/listadoDeProductos.html">Listado</a>
+      </nav>
+    </header>
+
+    <!-- Contenedor principal para el contenido -->
+    <main class="main-container">
+      <section class="search-section">
+        <div class="buscador">
+          <select name="categoria">
+            <option value="seleccione">Seleccione una categoría</option>
+            <option value="casas">Casas</option>
+            <option value="apartamentos">Apartamentos</option>
+            <option value="Penthouse">Penthouse</option>
+            <option value="Finca">Finca</option>
+            <option value="Oficina">Oficina</option>
+            <option value="Local Comercial">Local Comercial</option>
+            <option value="Bodega">Bodega</option>
+            <option value="Lote">Lote</option>
+            <option value="Edificio">Edificio</option>
+            <option value="Consultorio">Consultorio</option>
+          </select>
+
+          <input
+            type="text"
+            name="buscador"
+            placeholder="Buscador de inmuebles"
+          />
+
+          <div class="buscador-botones">
+            <button type="button">Buscar</button>
+            <button type="button">Limpiar</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="content">
+        <div class="items">
+          <!-- Tarjeta de ejemplo -->
+          <article class="card">
+            <!--  <div class="card-header">-->
+            <!--    <img src="../img/img2.png" alt="Apartamento ABC">-->
+            <!--  </div>-->
+            <!--  <div class="card-body">-->
+            <!--    <ul>-->
+            <!--      <li><strong>Codigo:</strong> 1221</li>-->
+            <!--      <li><strong>Nombre:</strong> Apartamento ABC</li>-->
+            <!--      <li><strong>Estrato:</strong> 5</li>-->
+            <!--      <li><strong>Barrio:</strong> Valle del Lili</li>-->
+            <!--      <li><strong>Dirección:</strong> Valle del Lili</li>-->
+            <!--      <li><strong>Precio:</strong> $1,000,000</li>-->
+            <!--    </ul>-->
+            <!--  </div>-->
+          </article>
+        </div>
+
+        <nav class="nav-pagination">
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#" onclick="prevPage()">Anterior</a>
+            </li>
+            <div class="page-item" id="items-pagination"></div>
+            <li class="page-item"><a class="page-link" href="#" onclick="nextPage()">siguiente</a></li>
+          </ul>
+        </nav>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Stone Buldings SAS. Todos los derechos reservados.</p>
+    </footer>
+
+    <script type="module" src="../js/listados.js"></script>
+    <script src="../js/Data.js"></script>
+  </body>
+</html>

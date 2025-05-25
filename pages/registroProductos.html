@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/forms.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Listado</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-left">
+        <div class="logo">
+          <img src="/img/logo.png" alt="Logo de la empresa" />
+        </div>
+        <h1>Stone Buldings SAS</h1>
+      </div>
+      <nav>
+        <a href="../index.html">Indicaciones</a>
+        <a href="/pages/registroProductos.html">Registro</a>
+        <a href="/pages/listadoDeProductos.html">Listado</a>
+      </nav>
+    </header>
+    <section class="content-form">
+      <article>
+        <h1>Registro de Productos</h1>
+        <p>
+          Para registrar un producto, por favor complete el siguiente formulario
+          con la información requerida.
+        </p>
+
+        <form class="formulario">
+          <label for="">Ingrese el Nombre del inmueble</label>
+          <input
+            type="text"
+            name="nombre_producto"
+            placeholder="Ingresar nombre de la vivienda"
+          />
+          <label for="">Seleccione Categoria del inmuble</label>
+          <select name="categoria" id="categoria">
+            <option value="seleccione">Seleccione una categoría</option>
+            <option value="casas">Casas</option>
+            <option value="apartamentos">Apartamentos</option>
+            <option value="Penthouse">Penthouse</option>
+            <option value="Finca">Finca</option>
+            <option value="Oficina">Oficina</option>
+            <option value="Local Comercial">Local Comercial</option>
+            <option value="Bodega">Bodega</option>
+            <option value="Lote">Lote</option>
+            <option value="Edificio">Edificio</option>
+            <option value="Consultorio">Consultorio</option>
+          </select>
+          <label for="">Seleccione el Estrato del inmuble</label>
+          <select name="" id="estrato">
+            <option value="seleccione">Seleccione una opción</option>
+            <option value="Estrato 1">Estrato 1</option>
+            <option value="Estrato 2">Estrato 2</option>
+            <option value="Estrato 3">Estrato 3</option>
+            <option value="Estrato 4">Estrato 4</option>
+            <option value="Estrato 5">Estrato 5</option>
+          </select>
+          <label for="">Seleccione la imagen</label>
+          <select id="imagen">
+            <option value="seleccione">Seleccione una opción</option>
+            <option value="img1.png">Imagen 1</option>
+            <option value="img2.png">Imagen 2</option>
+            <option value="img3.png">Imagen 3</option>
+            <option value="img4.png">Imagen 4</option>
+            <option value="img5.png">Imagen 5</option>
+            <option value="img6.png">Imagen 5</option>
+            <option value="img7.png">Imagen 7</option>
+            <option value="img8.png">Imagen 8</option>
+            <option value="img9.png">Imagen 9</option>
+            <option value="img10.png">Imagen 10</option>
+          </select>
+          <label for="">Ingresa el codigo inmueble</label>
+          <input type="text" name="Codigo" placeholder="Ingresa Codigo" />
+          <label for="">Ingresa la Dirreccion</label>
+          <input
+            type="text"
+            name="dirrecion"
+            placeholder="Dirrecion de Inmueble"
+          />
+          <label for="">Ingrese el Barrio</label>
+          <input
+            type="text"
+            name="barrio"
+            placeholder="Ingrese Barrio Inmueble"
+          />
+          <label for="">Ingresa el precio del inmueble</label>
+          <input type="text" name="precio" placeholder="Precio Inmueble" />
+          <div class="botones-forms">
+            <button id="Registrar" onclick="registrar()">Registrar</button>
+            <button id="Limpiar" onclick="limpiar()">Limpiar</button>
+          </div>
+
+        </form>
+      </article>
+    </section>
+    <script src="../js/registro.js"></script>
+    <footer>
+      <p>&copy; 2025 Stone Buldings SAS. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>
