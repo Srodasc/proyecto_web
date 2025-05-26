@@ -385,6 +385,76 @@ button:hover {
   border-radius: 4px;
 }
 
+/* Estilos para ejemplos de registro de inmuebles */
+
+.ejemplos-registro {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los ejemplos se ajusten en móviles */
+  justify-content: start;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px; /* Limita el ancho máximo en pantallas grandes */
+}
+.ejemplo-inmueble {
+  background-color: #f8f9fa;
+  border-left: 4px solid #457b9d;
+  border-radius: 4px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  width: 300px;
+  min-width: 200px; /* Ancho mínimo para mantener usabilidad */
+  max-width: 500px; /* Ancho máximo para evitar que se extienda demasiado */
+  height: max-content; /* Permite que el contenido se ajuste sin restricciones de altura */
+}
+
+.ejemplo-inmueble:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ejemplo-inmueble h3 {
+  color: #1d3557;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+
+.ejemplo-inmueble ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ejemplo-inmueble li {
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed #e9ecef;
+}
+
+.ejemplo-inmueble li:last-child {
+  border-bottom: none;
+}
+
+.ejemplo-inmueble strong {
+  color: #457b9d;
+  margin-right: 0.5rem;
+}
+
+.nota-importante {
+  background-color: #e8f4f8;
+  border-radius: 4px;
+  padding: 1rem 1.5rem;
+  margin: 2rem 0;
+  border-left: 4px solid #3498db;
+  font-size: 0.95rem;
+}
+
+.nota-importante strong {
+  color: #2980b9;
+}
+
 /* Diseño buscador */
 .content-table {
   max-width: 1200px;
