@@ -9,7 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <title>Registro</title>
+    <title>Buscador</title>
   </head>
   <body>
     <header>
@@ -20,9 +20,9 @@
         <h1>Stone Buldings SAS</h1>
       </div>
       <nav>
-        <a href="../index.html">Indicaciones</a>
-        <a href="/pages/registroProductos.html">Registro</a>
-        <a href="/pages/listadoDeProductos.html">Listado</a>
+        <a href="../pages/IndicacionesDeInmuebles.html">Indicaciones</a>
+        <a href="../pages/registroInmuebles.html">Registro</a>
+        <a href="../index.html">Listado</a>
       </nav>
     </header>
 
@@ -30,6 +30,13 @@
     <main class="main-container">
       <section class="search-section">
         <div class="buscador">
+          <label for="">Buscador Por Nombre</label>
+          <input
+            type="text"
+            name="buscador"
+            placeholder="Buscador de inmuebles"
+          />
+          <label for="">Seleccione la categoria del inmuble</label>
           <select name="categoria">
             <option value="seleccione">Seleccione una categoría</option>
             <option value="casas">Casas</option>
@@ -44,37 +51,53 @@
             <option value="Consultorio">Consultorio</option>
           </select>
 
-          <input
-            type="text"
-            name="buscador"
-            placeholder="Buscador de inmuebles"
-          />
+          <label for="">Seleccione el Estrato del inmuble</label>
+          <select name="" id="estrato">
+            <option value="seleccione">Seleccione una opción</option>
+            <option value="Estrato 1">Estrato 1</option>
+            <option value="Estrato 2">Estrato 2</option>
+            <option value="Estrato 3">Estrato 3</option>
+            <option value="Estrato 4">Estrato 4</option>
+            <option value="Estrato 5">Estrato 5</option>
+          </select>
 
           <div class="buscador-botones">
-            <button type="button">Buscar</button>
-            <button type="button">Limpiar</button>
+            <button id="buscar" type="button">Buscar</button>
+            <button id="limpiar" type="button">Limpiar</button>
           </div>
         </div>
       </section>
 
-      <section class="content">
-        <div class="items">
+      <section class="content-table">
+        <div class="items-table">
           <!-- Tarjeta de ejemplo -->
-          <article class="card">
-            <!--  <div class="card-header">-->
-            <!--    <img src="../img/img2.png" alt="Apartamento ABC">-->
-            <!--  </div>-->
-            <!--  <div class="card-body">-->
-            <!--    <ul>-->
-            <!--      <li><strong>Codigo:</strong> 1221</li>-->
-            <!--      <li><strong>Nombre:</strong> Apartamento ABC</li>-->
-            <!--      <li><strong>Estrato:</strong> 5</li>-->
-            <!--      <li><strong>Barrio:</strong> Valle del Lili</li>-->
-            <!--      <li><strong>Dirección:</strong> Valle del Lili</li>-->
-            <!--      <li><strong>Precio:</strong> $1,000,000</li>-->
-            <!--    </ul>-->
-            <!--  </div>-->
+          <article class="table-result">
+              <!-- 
+              
+              <table>
+                <thead>
+                  <tr>
+                    <th>Codigo</th>
+                    <th>Nombre</th>
+                    <th>Imagen  </th>
+                    <th>Estrato</th>
+                    <th>Dirrecion</th>
+                    <th>Precio</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1221</td>
+                    <td>Apartamento ABC</td>
+                    <td>5</td>
+                    <td>Valle del Lili</td>
+                    <td>Valle del Lili</td>
+                    <td>$1,000,000</td>
+                  </tr>
+                </tbody>
+              </table>
           </article>
+          -->
         </div>
 
         <nav class="nav-pagination">
@@ -92,8 +115,7 @@
     <footer>
       <p>&copy; 2025 Stone Buldings SAS. Todos los derechos reservados.</p>
     </footer>
-
-    <script type="module" src="../js/listados.js"></script>
+    <script type="module" src="../js/buscador.js"></script>
     <script src="../js/Data.js"></script>
   </body>
 </html>

@@ -134,7 +134,7 @@ function registrar() {
   };
 
   if(!validarTodosLosCampos( nombreProducto, categoria, estrato,precio, direccion, barrio, imagen)){
-    window.location.replace("../index.html");
+    window.location.replace("../pages/IndicacionesDeInmuebles.html");
     return; // Si la validación falla, no continuar con el registro
   } else{
     window.location.replace("../pages/listadoDeProductos.html");

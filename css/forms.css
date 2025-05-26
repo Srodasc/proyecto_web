@@ -35,3 +35,8 @@
     border-radius: 4px;
     font-size: 16px;
 }
+
+.botones-forms{
+    display: flex;
+    justify-content: space-evenly;
+}

@@ -2,7 +2,7 @@ import { cargarDatos } from "./Data.js";
 
 let data = [];
 
-function cargarInformacion() {
+export function cargarInformacion() {
   if (window.localStorage.getItem("propiedadesData") === null) {
     data = cargarDatos(); // CORREGIDO: Asignar el resultado de la función
     console.log(data);

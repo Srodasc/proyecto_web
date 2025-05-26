@@ -3,12 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Indicaciones</title>
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/forms.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <title>Listado</title>
   </head>
   <body>
     <header>
@@ -19,60 +20,57 @@
         <h1>Stone Buldings SAS</h1>
       </div>
       <nav>
-        <a href="../index.html">Indicaciones</a>
-        <a href="/pages/registroProductos.html">Registro</a>
-        <a href="/pages/listadoDeProductos.html">Listado</a>
+        <a href="pages/IndicacionesDeInmuebles.html">Indicaciones</a>
+        <a href="pages/registroInmuebles.html">Registro</a>
+        <a href="../index.html">Listado</a>
       </nav>
     </header>
 
-    <section class="content">
-      <article>
-        <h1>Stone Buldings SAS</h1>
-        <p>
-          Stone Building SAS es una inmobiliaria especializada en el desarrollo,
-          venta y alquiler de propiedades residenciales y comerciales. Nos
-          destacamos por ofrecer soluciones inmobiliarias de alta calidad, con
-          un enfoque en diseño moderno, materiales duraderos y ubicaciones
-          estratégicas. Nuestro compromiso es brindar asesoría personalizada,
-          transparencia en cada transacción y propiedades que combinan
-          funcionalidad y estilo.
-        </p>
+    <!-- Contenedor principal para el contenido -->
+    <main class="main-container">
+          <div class="buscador">
+            <button type="button"><a href="pages/registroInmuebles.html">Registrar Inmueble Nuevo</a></button>
+            <button type="button"><a href="pages/buscadorInmuebles.html">Buscar Inmueble</a></button>
+          </div>
+        </div>
+      </section>
 
-        <h2>Indicaciones Para publicar un inmuble de vivienda</h2>
-        <p>Se debe ingresar los siguientes datos:</p>
-        <ul>
-          <li>Nombre del Conjunto o Referencia</li>
-          <li>Tipo de inmueble</li>
-          <li>Codigo de la vivienda</li>
-          <li>Dirreccion</li>
-          <li>Ubicacion</li>
-          <li>Estrato</li>
-          <li>Precio</li>
-          <li>Imagenes de Referencia</li>
-        </ul>
+      <section class="content">
+        <div class="items">
+          <!-- Tarjeta de ejemplo -->
+          <article class="card">
+            <!--  <div class="card-header">-->
+            <!--    <img src="../img/img2.png" alt="Apartamento ABC">-->
+            <!--  </div>-->
+            <!--  <div class="card-body">-->
+            <!--    <ul>-->
+            <!--      <li><strong>Codigo:</strong> 1221</li>-->
+            <!--      <li><strong>Nombre:</strong> Apartamento ABC</li>-->
+            <!--      <li><strong>Estrato:</strong> 5</li>-->
+            <!--      <li><strong>Barrio:</strong> Valle del Lili</li>-->
+            <!--      <li><strong>Dirección:</strong> Valle del Lili</li>-->
+            <!--      <li><strong>Precio:</strong> $1,000,000</li>-->
+            <!--    </ul>-->
+            <!--  </div>-->
+          </article>
+        </div>
 
-        <h2>Categorias Disponibles para registrar</h2>
-        <ul>
-          <li>Casas</li>
-          <li>Apartamentos</li>
-          <li>Penthouse</li>
-          <li>Finca</li>
-          <li>Oficina</li>
-          <li>Local Comercial</li>
-          <li>Bodega</li>
-          <li>Lote</li>
-          <li>Edificio</li>
-          <li>Consultorio</li>
-        </ul>
+        <nav class="nav-pagination">
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#" onclick="prevPage()">Anterior</a>
+            </li>
+            <div class="page-item" id="items-pagination"></div>
+            <li class="page-item"><a class="page-link" href="#" onclick="nextPage()">siguiente</a></li>
+          </ul>
+        </nav>
+      </section>
+    </main>
 
-        <button type="button">
-          <a href="pages/registroProductos.html">Registro de Vivienda</a>
-        </button>
-      </article>
-    </section>
-    <script src="js/funciones.js"></script>
     <footer>
       <p>&copy; 2025 Stone Buldings SAS. Todos los derechos reservados.</p>
     </footer>
+    <script type="module" src="js/listados.js"></script>
+    <script src="js/Data.js"></script>
   </body>
 </html>
