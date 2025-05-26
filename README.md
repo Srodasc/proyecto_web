@@ -51,7 +51,7 @@ La aplicación está diseñada para facilitar la administración de un catálogo
 
 1. **Clonar o descargar el repositorio**:
    ```
-   git clone [URL del repositorio]
+   git clone https://github.com/Srodasc/proyecto_web.git
    ```
 
 2. **Abrir el proyecto**:
